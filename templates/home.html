@@ -1,4 +1,8 @@
 <h1>All of the pockmons</h1>
 <div>
-  <ivy-pocketmon pocketmon="pocketmon" ng-repeat="pocketmon in results"></ivy-pocketmon>
+  <hr>
+  <div ng-repeat="pokemon in pocketmons[0] track by $index">
+    <ivy-pokemon pokemon="pokemon"></ivy-pokemon>
+    <hr>
+  </div>
 </div>

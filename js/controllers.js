@@ -1,9 +1,6 @@
 app.controller("PocketmonCtrl",["$scope", "pocketmonService", function($scope, pocketmonService){
-  pocketmonService.getPokemons().then(function(result){
-    $scope.results = result;
+
+  Promise.resolve(pocketmonService.getPokemons()).then(function(data){
+    $scope.pocketmons = data;
   });
-}]);
-
-app.controller("linkCtrl", ["$scope", function($scoope){
-
 }]);

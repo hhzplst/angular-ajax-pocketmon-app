@@ -1,24 +1,9 @@
-app.directive("ivyPocketmon", function(){
+app.directive("ivyPokemon", function(){
   return {
-    templateUrl: "partials/pocketmon.html",
+    restrict: "E",
+    templateUrl: "partials/pokemon.html",
     scope: {
-      pocketmon: "="
-    }
-  };
-});
-
-app.directive('gsChangeBackground', function() {
-  return {
-    link: function(scope, element, attrs) {
-      var oldColor = element.css('background-color');
-
-      element.on('mouseenter', function(event) {
-        element.css('background-color', 'yellow');
-      });
-
-      element.on('mouseleave', function(event) {
-        element.css('background-color', oldColor);
-      });
+      pokemon: "="
     }
   };
 });
